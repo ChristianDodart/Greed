@@ -1,0 +1,81 @@
+<!-- Copyright (c) <2021>, <Christian Dodart>
+  All rights reserved.
+  
+  This source code is licensed under the BSD-style license found in the
+  LICENSE file in the root directory of this source tree. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" text="text/css" />
+    <!-- <link rel="stylesheet" href="form.css" /> -->
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- form -->
+    <div class="overlay">
+      <!-- <div class="main-block">
+        <h1>Who will be playing?</h1>
+        <form action="" method="post" id="form">
+          <input
+            type="text"
+            name="setPlayer1"
+            id="setPlayer1"
+            placeholder="Player 1"
+            required
+          />
+          <input
+            type="text"
+            name="setPlayer2"
+            id="setPlayer2"
+            placeholder="Player 2"
+            required
+          />
+          <div class="btn-block">
+            <button class="submitBtn" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div> -->
+    <!-- form end -->
+
+    <!-- glass background -->
+    <div class="background">
+      <div class="container">
+        <!-- first panel -->
+        <div class="panel1 active" id="panel1">
+          <p class="name activeText" id="name1">Player 1</p>
+          <p class="score" id="score1">0</p>
+          <div class="currentBox" id="currentBox1">
+            <p class="currentScore text">Current Score</p>
+            <p class="currentScore" id="currentScore1">0</p>
+          </div>
+        </div>
+        <!-- button panel -->
+        <div class="btnsContainer">
+          <div class="space2"></div>
+          <button class="btns" id="btnNew">🔁 New Game</button>
+          <div class="space"><img class="hidden" id="dieIMG" src="images/dice-1.png" alt="Playing Dice"></div>
+          <button class="btns" id="btnRoll">🎲 Roll Dice</button>
+          <div class="space2"></div>
+          <button class="btns" id="btnHold">🛑 Hold</button>
+          <div class="space2"></div>
+        </div>
+        <!-- second panel -->
+        <div class="panel2" id="panel2">
+          <p class="name" id="name2">Player 2</p>
+          <p class="score" id="score2">0</p>
+          <div class="currentBox" id="currentBox2">
+            <p class="currentScore text">Current Score</p>
+            <p class="currentScore" id="currentScore2">0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- script -->
+    <script src="script.js"></script>
+  </body>
+</html>

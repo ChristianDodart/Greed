@@ -1,0 +1,66 @@
+/* Copyright (c) <2021>, <Christian Dodart>
+All rights reserved.
+
+This source code is licensed under the BSD-style license found in the
+LICENSE file in the root directory of this source tree.  */
+
+.hidden {
+  visibility: hidden;
+}
+.main-block {
+  position: absolute;
+  top: 20%;
+  right: 37%;
+  z-index: 4;
+  max-width: auto;
+  min-height: auto;
+  padding: 10px 0;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.38);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+  border-radius: 10px;
+  visibility: visible;
+  text-align: center;
+}
+.overlay {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.38);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+form {
+  margin: 20% 30px;
+}
+input[type="text"] {
+  width: 80%;
+  height: 2.2rem;
+  margin: 13px 0 0 -5px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: solid 1px #cbc9c9;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
+  background: rgba(255, 255, 255, 0.95);
+}
+.btn-block {
+  margin-top: 10px;
+  text-align: center;
+}
+.submitBtn {
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: none;
+  background: #1c87c9;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+.submitBtn:hover {
+  background: #26a9e0;
+}
