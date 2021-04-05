@@ -23,21 +23,19 @@ let player1Score = 0;
 let player2Score = 0;
 
 // Assign Player Names Logic
-const assignNames = function () {
-  const playerName1 = prompt(
-    `Player One:
+const playerName1 = prompt(
+  `Player One:
   Enter your name`,
-    "Harry Potter"
-  );
-  const playerName2 = prompt(
-    `                                                               Player Two:
+  "Harry Potter"
+);
+const playerName2 = prompt(
+  `                                                               Player Two:
                                                                  Enter your name`,
-    "Ron Weasley"
-  );
-  document.getElementById("name1").textContent = playerName1;
-  document.getElementById("name2").textContent = playerName2;
-};
-assignNames();
+  "Ron Weasley"
+);
+document.getElementById("name1").textContent = playerName1;
+document.getElementById("name2").textContent = playerName2;
+
 // New Game Logic
 const init = function () {
   score1.textContent = 0;
@@ -66,6 +64,47 @@ const init = function () {
   document.getElementById("btnHold").classList.remove("btnText");
   document.getElementById("btnRoll").textContent = "🎲 Roll Dice";
   document.getElementById("btnHold").textContent = "🛑 Hold";
+};
+// Game Over Logic
+const gameOver = function () {
+  if (player1Score >= 75) {
+    panel1.classList.toggle("panelWinner");
+    panel2.classList.toggle("panelLoser");
+    name2.classList.toggle("fontLoser");
+    score2.classList.toggle("fontLoser");
+    panel1.classList.remove("active");
+    panel2.classList.remove("active");
+    name1.classList.add("activeText");
+    name2.classList.remove("activeText");
+    die.classList.add("hidden");
+    document.getElementById("btnRoll").textContent = playerName1 + " Wins!";
+    document.getElementById("btnHold").textContent = playerName2 + " Loses!";
+    document.getElementById("btnRoll").classList.add("btnText");
+    document.getElementById("btnHold").classList.add("btnText");
+    gameState = false;
+
+    currentScore1.textContent = 0;
+    currentScore2.textContent = 0;
+
+    gameState = false;
+  } else if (player2Score >= 75) {
+    panel2.classList.toggle("panelWinner");
+    panel1.classList.toggle("panelLoser");
+    name1.classList.toggle("fontLoser");
+    score1.classList.toggle("fontLoser");
+    panel1.classList.remove("active");
+    panel2.classList.remove("active");
+    name1.classList.remove("activeText");
+    name2.classList.add("activeText");
+    die.classList.add("hidden");
+    document.getElementById("btnRoll").textContent = playerName2 + " Wins!";
+    document.getElementById("btnHold").textContent = playerName1 + " Loses!";
+    document.getElementById("btnRoll").classList.add("btnText");
+    document.getElementById("btnHold").classList.add("btnText");
+    gameState = false;
+    currentScore1.textContent = 0;
+    currentScore2.textContent = 0;
+  }
 };
 // Roll Dice Logic
 const roll = function () {
@@ -123,46 +162,6 @@ const switchPlayers = function () {
   panel2.classList.toggle("active");
   name1.classList.toggle("activeText");
   name2.classList.toggle("activeText");
-};
-// Game Over Logic
-const gameOver = function () {
-  if (player1Score >= 75) {
-    panel1.classList.toggle("panelWinner");
-    panel2.classList.toggle("panelLoser");
-    name2.classList.toggle("fontLoser");
-    score2.classList.toggle("fontLoser");
-    panel1.classList.remove("active");
-    panel2.classList.remove("active");
-    name1.classList.add("activeText");
-    name2.classList.remove("activeText");
-    die.classList.add("hidden");
-    document.getElementById("btnRoll").textContent = playerName1 + " Wins!";
-    document.getElementById("btnHold").textContent = playerName2 + " Loses!";
-    document.getElementById("btnRoll").classList.add("btnText");
-    document.getElementById("btnHold").classList.add("btnText");
-    gameState = false;
-    currentScore1.textContent = 0;
-    currentScore2.textContent = 0;
-
-    gameState = false;
-  } else if (player2Score >= 75) {
-    panel2.classList.toggle("panelWinner");
-    panel1.classList.toggle("panelLoser");
-    name1.classList.toggle("fontLoser");
-    score1.classList.toggle("fontLoser");
-    panel1.classList.remove("active");
-    panel2.classList.remove("active");
-    name1.classList.remove("activeText");
-    name2.classList.add("activeText");
-    die.classList.add("hidden");
-    document.getElementById("btnRoll").textContent = playerName2 + " Wins!";
-    document.getElementById("btnHold").textContent = playerName1 + " Loses!";
-    document.getElementById("btnRoll").classList.add("btnText");
-    document.getElementById("btnHold").classList.add("btnText");
-    gameState = false;
-    currentScore1.textContent = 0;
-    currentScore2.textContent = 0;
-  }
 };
 
 // Roll Dice Button
