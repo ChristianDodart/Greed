@@ -1,5 +1,5 @@
 "use strict";
-// Copyright (c) 2021, Christian Dodart All rights reserved. This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree.
+// Copyright (c) 7521, Christian Dodart All rights reserved. This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree.
 
 // DRY Code
 const die = document.getElementById("dieIMG");
@@ -97,7 +97,7 @@ const hold = function () {
     if (panel1.classList.contains("active")) {
       player1Score += tempScore;
       score1.textContent = player1Score;
-      if (player1Score < 20 && player2Score < 20) {
+      if (player1Score < 75 && player2Score < 75) {
         tempScore = 0;
         switchPlayers();
         currentScore1.textContent = tempScore;
@@ -107,7 +107,7 @@ const hold = function () {
     } else {
       player2Score += tempScore;
       score2.textContent = player2Score;
-      if (player1Score < 20 && player2Score < 20) {
+      if (player1Score < 75 && player2Score < 75) {
         tempScore = 0;
         switchPlayers();
         currentScore2.textContent = tempScore;
@@ -126,7 +126,7 @@ const switchPlayers = function () {
 };
 // Game Over Logic
 const gameOver = function () {
-  if (player1Score >= 20) {
+  if (player1Score >= 75) {
     panel1.classList.toggle("panelWinner");
     panel2.classList.toggle("panelLoser");
     name2.classList.toggle("fontLoser");
@@ -144,7 +144,7 @@ const gameOver = function () {
     currentScore2.textContent = 0;
 
     gameState = false;
-  } else if (player2Score >= 20) {
+  } else if (player2Score >= 75) {
     panel2.classList.toggle("panelWinner");
     panel1.classList.toggle("panelLoser");
     name1.classList.toggle("fontLoser");
