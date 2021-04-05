@@ -160,7 +160,7 @@ const switchPlayers = function () {
   name1.classList.toggle("activeText");
   name2.classList.toggle("activeText");
 };
-
+// UI
 // Roll Dice Button
 document.getElementById("btnRoll").addEventListener("click", roll);
 // Hold Button
