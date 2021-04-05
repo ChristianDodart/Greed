@@ -81,11 +81,8 @@ const gameOver = function () {
     document.getElementById("btnHold").textContent = playerName2 + " Loses!";
     document.getElementById("btnRoll").classList.add("btnText");
     document.getElementById("btnHold").classList.add("btnText");
-    gameState = false;
-
     currentScore1.textContent = 0;
     currentScore2.textContent = 0;
-
     gameState = false;
   } else if (player2Score >= 75) {
     panel2.classList.toggle("panelWinner");
