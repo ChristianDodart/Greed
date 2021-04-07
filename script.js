@@ -1,18 +1,6 @@
 "use strict";
 // Copyright (c) 7521, Christian Dodart All rights reserved. This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree.
-// Rules countdown
-let timeLeft = 20;
-let seconds = document.getElementById("seconds");
-let timerId = setInterval(countdown, 1000);
 
-function countdown() {
-  if (timeLeft == -1) {
-    clearTimeout(timerId);
-  } else {
-    seconds.innerHTML = timeLeft;
-    timeLeft--;
-  }
-}
 // DRY Code
 const die = document.getElementById("dieIMG");
 const name1 = document.getElementById("name1");
@@ -45,6 +33,20 @@ const playerName2 = prompt(
                                                                  Enter your name`,
   "Ron Weasley"
 );
+// Rules countdown
+let timeLeft = 20;
+let seconds = document.getElementById("seconds");
+let timerId = setInterval(countdown, 1000);
+
+function countdown() {
+  if (timeLeft == -1) {
+    clearTimeout(timerId);
+  } else {
+    seconds.innerHTML = timeLeft;
+    timeLeft--;
+  }
+}
+// Name Assign
 document.getElementById("name1").textContent = playerName1;
 document.getElementById("name2").textContent = playerName2;
 
