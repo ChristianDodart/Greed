@@ -168,6 +168,8 @@ body {
   height: 100%;
   z-index: 5;
   background-color: rgba(0, 0, 0, 0.85);
+}
+.rulesContainerFade {
   animation: hide 3s linear 30s forwards;
 }
 .rulesContainer2 {
