@@ -127,6 +127,12 @@ const roll = function () {
     }
   }
 };
+const ani1 = function () {
+  die.classList.toggle("dieRoll");
+  setTimeout(function () {
+    die.classList.toggle("dieRoll");
+  }, 600);
+};
 // Hold Dice Logic
 const hold = function () {
   if (gameState) {
