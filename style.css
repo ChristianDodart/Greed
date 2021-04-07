@@ -61,6 +61,8 @@ body {
   border-radius: 10px;
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  /* transform: scale(1.1); */
 }
 .btns:focus {
   outline: none;
@@ -194,10 +196,10 @@ body {
 }
 @keyframes scale {
   from {
-    transform: scale(0.99);
+    transform: scale(0.98);
   }
   to {
-    transform: scale(1.02);
+    transform: scale(1.1);
   }
 }
 @keyframes fontLoser {
