@@ -22,34 +22,29 @@ let tempScore = 0;
 let player1Score = 0;
 let player2Score = 0;
 
-// Assign Player Names Logic
-const playerName1 = prompt(
-  `Player One:
-  Enter your name`,
-  "Harry Potter"
-);
-const playerName2 = prompt(
-  `                                                               Player Two:
-                                                                 Enter your name`,
-  "Ron Weasley"
-);
-// Rules countdown
-let timeLeft = 20;
-let seconds = document.getElementById("seconds");
-let timerId = setInterval(countdown, 1000);
-
-function countdown() {
-  if (timeLeft == -1) {
-    clearTimeout(timerId);
-  } else {
-    seconds.innerHTML = timeLeft;
-    timeLeft--;
-  }
-}
 // Name Assign
-document.getElementById("name1").textContent = playerName1;
-document.getElementById("name2").textContent = playerName2;
-
+document.getElementById("submitBtn").addEventListener("click", function () {
+  const playerName1 = document.getElementById("setPlayer1").value;
+  const playerName2 = document.getElementById("setPlayer2").value;
+  document.getElementById("name1").textContent = playerName1;
+  document.getElementById("name2").textContent = playerName2;
+  document.getElementById("form-container").classList.add("hidden");
+  document.getElementById("overlay").classList.add("hidden");
+  document.querySelector(".rulesContainer").classList.toggle("hidden");
+  // Rules countdown
+  let timeLeft = 30;
+  let seconds = document.getElementById("seconds");
+  let timerId = setInterval(countdown, 1000);
+  function countdown() {
+    if (timeLeft == -1) {
+      clearTimeout(timerId);
+    } else {
+      seconds.innerHTML = timeLeft;
+      timeLeft--;
+    }
+  }
+  document.querySelector(".rulesContainer").classList.add("rulesContainerFade");
+});
 // New Game Logic
 const init = function () {
   score1.textContent = 0;
