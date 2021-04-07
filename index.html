@@ -7,49 +7,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" text="text/css" />
-    <!-- <link rel="stylesheet" href="form.css" /> -->
+    <link rel="stylesheet" href="form.css" />
     <title>Greed</title>
   </head>
   <body>
-    <aside class="rulesContainer">
+    <div class="rulesContainer hidden" id="rulesContainer">
       <div class="rulesContainer2">
-      <h2 class="greed">Rules</h2>
-      <p class="rules">Greed is a simple, two-player, dice rolling game. The first person to score 75 points wins! 
-        <br>
-        <br>
-        Rules:</p>
+        <h2 class="greed">Rules</h2>
+        <p class="rules">
+          Greed is a simple, two-player, dice rolling game. The first person to
+          score 75 points wins!
+          <br />
+          <br />
+          Rules:
+        </p>
         <ul>
-       <li> - If you roll a 1 you lose your turn without keeping your score</li>
-       <li> - If you hold you will keep your score but your turn is over</li>
-      </ul>
-      <p class="right"><span id="seconds"></span></p>
-    </div>
-    </aside>
-    <!-- form -->
-    <div class="overlay">
-    <!-- <div class="main-block">
-        <h1>Who will be playing?</h1>
-        <form action="" method="post" id="form">
-          <input
-            type="text"
-            name="setPlayer1"
-            id="setPlayer1"
-            placeholder="Player 1"
-            required
-          />
-          <input
-            type="text"
-            name="setPlayer2"
-            id="setPlayer2"
-            placeholder="Player 2"
-            required
-          />
-          <div class="btn-block">
-            <button class="submitBtn" type="submit">Submit</button>
-          </div>
-        </form>
+          <li>
+            - If you roll a 1 you lose your turn without keeping your score
+          </li>
+          <li>- If you hold you will keep your score but your turn is over</li>
+        </ul>
+        <p class="right"><span id="seconds"></span></p>
       </div>
-    </div> -->
+    </div>
+    <!-- form -->
+    <div id="overlay">
+      <div id="form-container">
+        <h1>Who will be playing?</h1>
+        <input
+          type="text"
+          name="setPlayer1"
+          id="setPlayer1"
+          placeholder="Player 1"
+          required
+        />
+        <input
+          type="text"
+          name="setPlayer2"
+          id="setPlayer2"
+          placeholder="Player 2"
+          required
+        />
+        <div class="btn-block">
+          <button class="submitBtn" id="submitBtn">Learn the game</button>
+        </div>
+      </div>
+    </div>
     <!-- form end -->
 
     <!-- glass background -->

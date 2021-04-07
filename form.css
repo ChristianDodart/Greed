@@ -1,9 +1,6 @@
 /* Copyright (c) 7521, Christian Dodart All rights reserved. This source code is licensed under the BSD-style license found in the LICENSE file in the root directory of this source tree. */
 
-.hidden {
-  visibility: hidden;
-}
-.main-block {
+#form-container {
   position: absolute;
   top: 20%;
   right: 37%;
@@ -17,10 +14,9 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
   border-radius: 10px;
-  visibility: visible;
   text-align: center;
 }
-.overlay {
+#overlay {
   position: absolute;
   z-index: 3;
   width: 100%;
@@ -32,7 +28,7 @@
 form {
   margin: 20% 30px;
 }
-input[type="text"] {
+input {
   width: 80%;
   height: 2.2rem;
   margin: 13px 0 0 -5px;
@@ -56,6 +52,7 @@ input[type="text"] {
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
+  cursor: pointer;
 }
 .submitBtn:hover {
   background: #26a9e0;
