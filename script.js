@@ -22,10 +22,13 @@ let tempScore = 0;
 let player1Score = 0;
 let player2Score = 0;
 
+//Global Scope: Name
+let playerName1;
+let playerName2;
 // Name Assign
 document.getElementById("submitBtn").addEventListener("click", function () {
-  const playerName1 = document.getElementById("setPlayer1").value;
-  const playerName2 = document.getElementById("setPlayer2").value;
+  playerName1 = document.getElementById("setPlayer1").value;
+  playerName2 = document.getElementById("setPlayer2").value;
   document.getElementById("name1").textContent = playerName1;
   document.getElementById("name2").textContent = playerName2;
   document.getElementById("form-container").classList.add("hidden");
@@ -35,6 +38,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   let timeLeft = 30;
   let seconds = document.getElementById("seconds");
   let timerId = setInterval(countdown, 1000);
+  document.querySelector(".rulesContainer").classList.add("rulesContainerFade");
   function countdown() {
     if (timeLeft == -1) {
       clearTimeout(timerId);
@@ -43,7 +47,6 @@ document.getElementById("submitBtn").addEventListener("click", function () {
       timeLeft--;
     }
   }
-  document.querySelector(".rulesContainer").classList.add("rulesContainerFade");
 });
 // New Game Logic
 const init = function () {
